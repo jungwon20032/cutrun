@@ -1,0 +1,4 @@
+sample_ID	condition	replicate	R1	R2	control_ID	R1_control	R2_control
+SS001	EWSR1_WT	1	SRR21016719_1.fastq	SRR21016719_2.fastq	 	 	 	 
+SS002	EWSR2_WT	1	SRR21016720_1.fastq	SRR21016720_2.fastq	 	 	 	 
+SS003	EWSR3_WT	1	SRR21016721_1.fastq	SRR21016721_2.fastq	 	 	 	 
