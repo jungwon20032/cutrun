@@ -1,4 +1,4 @@
-#PBS -N main_sh
+#PBS -N normalization
 #PBS -l procs=20
 #PBS -l mem=20gb
 #PBS -q una
@@ -8,7 +8,7 @@
 #PBS -l walltime=12:00:00
 #PBS -r n
 
-source settings.conf
+source /home/jlee3/ChIPseq/settings.conf
 
 #########################################
 ## ChIP-seq Analysis of Multiple Samples
