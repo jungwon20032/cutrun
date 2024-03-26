@@ -51,4 +51,4 @@ done
 
 # Index BAM files for E. coli genome
 for BAM in ${OUTDIR}/ecoli_aligned/*.bam; do
-    samtools index $BAM
+    samtools index $BAM; done
