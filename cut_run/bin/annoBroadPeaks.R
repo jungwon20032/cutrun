@@ -23,7 +23,7 @@ opt <- getopt(options)
 ## ---------------
 
 # ensure the extra columns in the macs2 narrowpeaks are carried over
-extraCols_narrowPeak  <-  c(signal.value = "numeric", p.value.negLog10 = "numeric", q.value.negLog10 = "numeric", peak = "integer")
+extraCols_narrowPeak  <-  c(signal.value = "numeric", p.value.negLog10 = "numeric", q.value.negLog10 = "numeric", peak = "numeric")
 
 # load GTF/GFF file as TxDb object
 txdb <- makeTxDbFromGFF(opt$genomegtf)
