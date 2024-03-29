@@ -30,6 +30,7 @@ for ecoli_bam_file in "${ecoli_aligned_dir}"/*.bam; do
     # Calculate scale factor for each E. coli sample
     ecoli_reads=$(samtools view -c -F 4 "${ecoli_bam_file}")
     scale_factor=$(bc <<< "scale=3; 10000 / ${ecoli_reads}")
+        echo $scale_factor
 
     # Normalize Drosophila aligned bam files and generate bigwig files
     for drosophila_bam_file in "${drosophila_aligned_dir}"/*.bam; do
@@ -37,3 +38,4 @@ for ecoli_bam_file in "${ecoli_aligned_dir}"/*.bam; do
         bamCoverage --bam "${drosophila_bam_file}" -o "${output_bigwig}" --scaleFactor "${scale_factor}"
     done
 done
+

@@ -22,6 +22,6 @@ conda activate chipseq-automation
 ## making the plotCorrelatiion directory
 mkdir -p ${OUTDIR}/plotCorrelation
 
-multiBamSummary bins -bamfiles ${OUTDIR}/aligned/*.bam -o ${OUTDIR}/plotCorrelation/XYZ.npz
+multiBamSummary bins --bamfiles ${OUTDIR}/aligned/*.bam -o ${OUTDIR}/plotCorrelation/XYZ.npz
 
 plotCorrelation -in ${OUTDIR}/plotCorrelation/XYZ.npz --whatToPlot heatmap --corMethod spearman -o ${OUTDIR}/plotCorrelation/XYZ.png --labels $(ls ${OUTDIR}/aligned/*.bam | xargs -n 1 basename | sed 's/\.bam//g')
